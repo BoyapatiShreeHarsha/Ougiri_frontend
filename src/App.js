@@ -1,24 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import Navbar from './components/Navbar/Navbar';
+import {
+  BrowserRouter,
+  Routes,
+  Route
+} from "react-router-dom";
+import Home from './screens/Home/Home'
+import Events from './screens/Events/Event'
+import Registration from './screens/Registration/Registration'
+import EventForm from './screens/EventForm/EventForm';
+import TicketState from './context/registration/TicketState';
+import TicketSuccess from './screens/TicketSuccess/TicketSuccess';
+import TicketFailure from './screens/TicketFailure/TicketFailure';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <TicketState>
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route exact path="/" element={<Home/>} />
+          <Route exact path="/events" element={<Events/>} />
+          <Route exact path="/events/success" element={<TicketSuccess/>} />
+          <Route exact path="/events/failure" element={<TicketFailure/>}/>
+          <Route exact path="/events/eform" element={<EventForm/>}/>
+          <Route exact path="/registration" element={<Registration/>} />
+        </Routes>
+      </BrowserRouter>
+      </TicketState>
+    </>
   );
 }
 
