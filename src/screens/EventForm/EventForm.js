@@ -2,7 +2,7 @@ import React,{useState,useContext,useEffect} from 'react'
 import logo from '../../images/logo.jpg'
 import './EventForm.css'
 import { useNavigate } from 'react-router-dom';
-import ticketContext from '../../context/registration/TicketContext';
+import ticketContext from '../../context/Event/TicketContext';
 
 export default function EventForm() {
     let navigate = useNavigate();
@@ -44,16 +44,16 @@ export default function EventForm() {
 
     return (
         
-        <div className="bodyy">
-            <div className="box">
-                <div className="heading">
+        <div className="EventForm_bodyy">
+            <div className="EventForm_box">
+                <div className="EventForm_heading">
                     <img src={logo} alt="Ougri" />
                     <p>O U G R I</p>
                 </div>
                 <form onSubmit={Submitted}>
                     <div className="mb-3">
                         <label htmlFor="first_name" className="form-label">Name</label>
-                        <div className="flexing">
+                        <div className="EventForm_flexing">
                             <span >
                                 <input type="text" className="form-control" id="first_name" name="fname" value={credentials.fname} onChange={changing} />
                                 <div id="first_name_tag" className="form-text">First Name</div>
@@ -76,17 +76,17 @@ export default function EventForm() {
                     </div>
 
                     <div className="mb-3">
-                        <div className="flexing">
+                        <div className="EventForm_flexing">
                         <label htmlFor="quantity" className="form-label">Tickets</label>
                         <label htmlFor="quantity" className="form-label">Rs 500/-</label>
                         </div>
-                        <div className="flexing2">
+                        <div className="EventForm_flexing2">
                         <div id="quantity_tag" className="form-text ">Quantity:</div>
                         <input type="number" className="form-control " id="quantity" min='1' name="quantity" value={credentials.quantity} onChange={changing}/>
                         </div>
                     </div>
 
-                    <button type="submit" className="mbtn">Continue to Payment</button>
+                    <button type="submit" className="EventForm_mbtn">Continue to Payment</button>
                 </form>
             </div>
             </div>

@@ -8,13 +8,18 @@ import Home from './screens/Home/Home'
 import Events from './screens/Events/Event'
 import Registration from './screens/Registration/Registration'
 import EventForm from './screens/EventForm/EventForm';
-import TicketState from './context/registration/TicketState';
+import TicketState from './context/Event/TicketState';
 import TicketSuccess from './screens/TicketSuccess/TicketSuccess';
 import TicketFailure from './screens/TicketFailure/TicketFailure';
+import RegistrationState from './context/Registration/RegistrationState'
+import RegistrationSuccess from './screens/RegistrationSuccess/RegistrationSucess';
+import RegistrationFailure from './screens/RegistrationFailure/RegistrationFailure';
+import RegistrationForm from './screens/RegistrationForm/RegistrationForm';
 
 function App() {
   return (
     <>
+      <RegistrationState>
       <TicketState>
       <BrowserRouter>
         <Navbar />
@@ -25,9 +30,13 @@ function App() {
           <Route exact path="/events/failure" element={<TicketFailure/>}/>
           <Route exact path="/events/eform" element={<EventForm/>}/>
           <Route exact path="/registration" element={<Registration/>} />
+          <Route exact path="/registration/success" element={<RegistrationSuccess/>}/>
+          <Route exact path="/registration/failure" element={<RegistrationFailure/>}/>
+          <Route exact path="/registration/eform" element={<RegistrationForm/>}/>
         </Routes>
       </BrowserRouter>
       </TicketState>
+      </RegistrationState>
     </>
   );
 }

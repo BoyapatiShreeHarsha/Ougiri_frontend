@@ -1,0 +1,15 @@
+.registerationpage{
+    margin-top: 50px;
+    justify-content: space-evenly;
+    text-align: center;
+ 
+}
+@media (max-width:415) {
+    .registerationpage{
+        justify-content: space-evenly;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+      
+    }   
+}

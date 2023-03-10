@@ -6,7 +6,7 @@ import { Link} from "react-router-dom";
 export default function Event() {
   return (
     <>
-    <div className="container">
+    <div className="container Event_container">
       <h2>Mega Night</h2>
       <img src={img} alt="Meganight"/>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, voluptatibus sed. Esse in totam expedita magni ullam fugiat necessitatibus, officiis laborum! Neque, earum saepe quasi illo amet harum beatae vero laboriosam, eos iure porro doloribus explicabo aliquid aut rem itaque voluptatem ad unde maiores dignissimos fuga velit, eaque fugiat assumenda? Eos tempora voluptatem inventore qui nemo, illo incidunt deserunt ipsam aliquid minima harum enim. Quod ipsam autem iusto cupiditate natus? Soluta qui ut id dicta?</p>

@@ -1,11 +1,11 @@
 import React,{useEffect} from 'react'
 import failure from '../../images/failure logo.png'
 import { useNavigate } from 'react-router-dom';
-export default function TicketFailure() {
+export default function RegistrationFailure() {
     let navigate=useNavigate();
     useEffect(() => {
       setTimeout(() => {
-        navigate("/events/eform")
+        navigate("/registration")
       }, 5*1000);
     }, [])
     

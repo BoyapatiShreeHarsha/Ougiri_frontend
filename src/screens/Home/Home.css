@@ -1,0 +1,28 @@
+.Home_ogri{
+    position:relative;
+    margin-top: 200px;
+}
+.Home_card{
+    width: 18rem;
+    height: 18rem;
+    align-items: center;
+}
+.Home_judge{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.Home_judges{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 50px;
+}
+
+
+@media(max-width:415px) {
+    .Home_card{
+        width: 7rem;
+        height: 15rem;
+        align-items: center;
+    }
+}
